@@ -1,7 +1,7 @@
 // Shark AI — service worker. Makes the app open and run with no internet.
 // Developed by MeshCode.
 // Bump VERSION whenever you change any app file so phones/computers pick up the update.
-const VERSION = "shark-ai-v1.1.0";
+const VERSION = "shark-ai-v1.1.1";
 const SHELL = [
   "./",
   "./index.html",
