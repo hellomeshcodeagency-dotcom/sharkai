@@ -524,7 +524,7 @@ async function renderEmpty() {
       $("#input").value = s.text; autoGrow(); $("#input").focus();
     } }, el("strong", {}, s.title), el("span", {}, s.attach ? "Attach a PDF or text file" : s.text)));
   }
-  wrap.append(cards, el("div", { class: "made-by", html: "Developed by <strong>MeshCode</strong>" }));
+  wrap.append(cards, el("div", { class: "made-by", html: 'Developed by <strong><a class="mc-link" href="https://x.com/meshcode2" target="_blank" rel="noopener noreferrer">MeshCode</a></strong>' }));
   messagesEl.append(wrap);
 
   // Setup card (async checks)
@@ -1271,7 +1271,7 @@ function updateNet() {
 function exportChat() {
   const c = activeChat();
   if (!c || !c.messages.length) { toast("Nothing to export yet."); return; }
-  let md = `# ${c.title}\n\n_Exported from Shark AI (developed by MeshCode) — ${new Date().toLocaleString()}_\n\n`;
+  let md = `# ${c.title}\n\n_Exported from Shark AI (developed by MeshCode · x.com/meshcode2) — ${new Date().toLocaleString()}_\n\n`;
   for (const m of c.messages) {
     if (m.role === "user") {
       md += `**You:**\n\n`;
@@ -1350,7 +1350,7 @@ async function renderWelcome() {
         el("li", {}, "📶 No data needed after setup"),
       ),
       el("p", { class: "wtext small muted" }, "Setup takes about 2 minutes plus one download. Use Wi-Fi if you can."),
-      el("div", { class: "wcredit", html: "Developed by <strong>MeshCode</strong>" }),
+      el("div", { class: "wcredit", html: 'Developed by <strong><a class="mc-link" href="https://x.com/meshcode2" target="_blank" rel="noopener noreferrer">MeshCode</a></strong>' }),
     );
     foot.append(el("button", { class: "btn btn-ghost", type: "button", onclick: finishWelcome }, "Skip"), next("Start setup"));
     return;
@@ -1479,7 +1479,7 @@ async function renderWelcome() {
       el("li", {}, "Switch models any time from the button at the top"),
     ),
     el("p", { class: "wtext small muted" }, "You can replay this guide from Settings."),
-    el("div", { class: "wcredit", html: "Developed by <strong>MeshCode</strong>" }),
+    el("div", { class: "wcredit", html: 'Developed by <strong><a class="mc-link" href="https://x.com/meshcode2" target="_blank" rel="noopener noreferrer">MeshCode</a></strong>' }),
   );
   foot.append(back(), el("button", { class: "btn btn-primary", type: "button", onclick: finishWelcome }, "Start chatting"));
 }
