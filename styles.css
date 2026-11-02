@@ -343,3 +343,8 @@ dialog.welcome { width: min(520px, 100vw); }
   .composer textarea { font-size: 16px; } /* stops iOS zoom */
 }
 dialog:focus, dialog:focus-visible { outline: none; }
+
+/* MeshCode credit link (X / Twitter) */
+a.mc-link { color: var(--accent); text-decoration: none; font-weight: 700; }
+a.mc-link:hover { text-decoration: underline; }
+.fine a.mc-link { font-weight: 600; }
